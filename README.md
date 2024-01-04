@@ -9,7 +9,7 @@ keystrokes.
 
 - [overseer.nvim](https://github.com/stevearc/overseer.nvim/tree/master)
 - [harpoon](https://github.com/ThePrimeagen/harpoon/tree/harpoon2)
-  - **Note:** must use harpoon2
+  - **note:** must use harpoon2
 
 Using Lazy:
 
