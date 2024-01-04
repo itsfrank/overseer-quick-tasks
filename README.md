@@ -52,17 +52,28 @@ a dependency to harpoon, then just add the `oqt =` line above to the setup
 object (I think you will need to remove harpoon form oqt's dependencies)
 
 ```lua
-local harpoon = require("harpoon")
-local oqt = require("oqt")
-harpoon:setup({
-    oqt = oqt.harppon_list_config, -- must be called "oqt"
-    -- rest of setup options
-})
+-- example harpoon lazy spec
+return {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2", -- required!
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+        "itsfrank/overseer-quick-tasks",
+    },
+    config = function()
+        local harpoon = require("harpoon")
+        local oqt = require("oqt")
+        harpoon:setup({
+            oqt = oqt.harppon_list_config, -- must be called "oqt"
+            -- rest of setup options
+        })
 
--- optional, set up the default oqt keymaps
-oqt.setup_keymaps()
+        -- optional, set up the default oqt keymaps
+        oqt.setup_keymaps()
 
--- rest of harpoon config
+        -- rest of harpoon config
+    end,
+}
 ```
 
 </details>
