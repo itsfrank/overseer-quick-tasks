@@ -124,3 +124,4 @@ be applied to them like normal.
 ## Current issues
 
 - Only supports shell tasks
+- Want to add an overseer action to append a task to the harpoon list
