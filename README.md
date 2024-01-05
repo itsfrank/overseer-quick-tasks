@@ -47,9 +47,9 @@ end,
 <details>
     <summary> Alternative - setup in harpoon's config </summary>
 
-Alternatively, you can add oqt in Harpoon's setup, this requires adding oqt as
-a dependency to harpoon, then just add the `oqt =` line above to the setup
-object (I think you will need to remove harpoon form oqt's dependencies)
+Alternatively, you can add oqt in Harpoon's setup, this requires adding both
+oqt and overseer as dependencies to harpoon, then just add the `oqt =` line
+above to the setup object
 
 ```lua
 -- example harpoon lazy spec
@@ -58,6 +58,7 @@ return {
     branch = "harpoon2", -- required!
     dependencies = {
         "nvim-lua/plenary.nvim",
+        "stevearc/overseer.nvim",
         "itsfrank/overseer-quick-tasks",
     },
     config = function()
