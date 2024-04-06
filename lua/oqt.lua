@@ -35,8 +35,12 @@ oqt.harppon_list_config = {
 
     -- dont have duplicate names, name will overwrite
     equals = function(list_line_a, list_line_b)
+        if list_line_a == nil or list_line_b == nil then
+            return false
+        end
         return list_line_a.value.name == list_line_b.value.name
     end,
+
 
     create_list_item = function(_, item)
         -- from ui
