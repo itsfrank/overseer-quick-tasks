@@ -41,7 +41,6 @@ oqt.harppon_list_config = {
         return list_line_a.value.name == list_line_b.value.name
     end,
 
-
     create_list_item = function(_, item)
         -- from ui
         if item ~= nil then
@@ -144,6 +143,7 @@ function oqt.float_last_task()
 
     local task = tasks[1]
     overseer.run_action(task, "open float")
+    vim.keymap.set("n", "q", ":q<cr>", { buffer = 0 })
 end
 
 --- open float output of task at index i
